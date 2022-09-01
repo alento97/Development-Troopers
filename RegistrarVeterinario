@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primer pagina</title>
+</head>
+<h1>Registre sus datos</h1>
+</body>
+<form>
+    Documento: <input type="text" name="Documento"><br><br>
+    Nombres: <input type="text" name="Firstname"><br><br>
+    Apellidos: <input type="text" name="Lastname"><br><br>
+    Email: <input type="text" name="Email"><br><br>
+    Teléfono: <input type="text" name="Teléfono"><br><br>
+    Dirección: <input type="text" name="Dirección"><br><br>
+    Tarjeta profesional: <input type="text" name="Tarjeta Profesional"><br><br>
+
+</form>
+<form name="input" action="demo_form_action.asp" method="get"><br><br>
+
+    <input type="submit" value="Enviar">
+</form>
+
+</html>
