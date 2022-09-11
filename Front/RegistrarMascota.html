@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link href="styleMascota.css" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="Mascota nav-link">Mascota Feliz</a>
+      <ul class="nav-menu">
+        <li class="nav-menu-item">
+          <a href="RegistrarDueno.html" class="nav-menu-link nav-link">Dueños</a>
+        </li>
+        <li class="nav-menu-item">
+          <a href="RegistrarMascota.html" class="nav-menu-link nav-link">Mascotas</a>
+        </li>
+        <li class="nav-menu-item">
+          <a href="RegistrarVeterinario.html" class="nav-menu-link nav-link">Veterinarios</a>
+        </li>
+        <li class="nav-menu-item">
+          <a href="ConsultarMascota.html" class="nav-menu-link nav-link">Consultar</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+   <section>
+    <div class="box-padre">
+      <div class="contenedor-perrito">
+        <img src="img/perrito.png" class="perrito-imagen" >
+      </div>      
+      <div class="testbox">
+        <h1>Registro Mascota</h1>  
+        <form action="/">
+          <hr>
+          <div class="accounttype">
+            <input type="radio" value="None" id="radioOne" name="account" checked/>
+            <label for="radioOne" class="radio" chec>Canino</label>
+            <input type="radio" value="None" id="radioTwo" name="account" />
+            <label for="radioTwo" class="radio">Felino</label>
+          </div>
+          <hr>
+          <label id="icon" for="name"><i class="bi bi-tag"></i></label>
+          <input type="text" name="name" id="name" placeholder="Nombre" required/>
+          <label id="icon" for="name"><i class="bi bi-clipboard-minus-fill"></i></label>
+          <input type="text" name="name" id="name" placeholder="Raza" required/>
+          <label id="icon" for="name"><i class="bi bi-paint-bucket"></i></label>
+          <input type="text" name="name" id="name" placeholder="Color" required/>
+          <hr>
+          <label id="dueno" for="format">Dueño</label>
+          <div class="select">
+            <select name="format" id="format">
+              <option selected disabled>Seleccione el dueño</option>
+              <option value="pdf">Juan</option>
+              <option value="txt">Camilo</option>
+            </select>
+          </div>
+          <label id="Veterinario" for="veter">Veterinario</label>
+          <div class="select">
+            <select name="veter" id="veter">
+              <option selected disabled>Seleccione el Veterinario</option>
+              <option value="pdf">Doctor Daniel</option>
+              <option value="txt">Doctor Miguel</option>
+            </select>
+          </div>
+          <button type="submit" class="registro-button"> Registrar</button>
+        </form>
+      </div>
+      <div class="contenedor-perrito">
+        <img src="img/gato.png" class="gatito-imagen" >
+      </div>
+    </div>      
+  </section> 
+</body>
+</html>

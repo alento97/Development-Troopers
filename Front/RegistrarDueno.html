@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link href="styleDuenos.css" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="Mascota nav-link">Mascota Feliz</a>
+      <ul class="nav-menu">
+        <li class="nav-menu-item">
+          <a href="RegistrarDueno.html" class="nav-menu-link nav-link">Dueños</a>
+        </li>
+        <li class="nav-menu-item">
+          <a href="RegistrarMascota.html" class="nav-menu-link nav-link">Mascotas</a>
+        </li>
+        <li class="nav-menu-item">
+          <a href="RegistrarVeterinario.html" class="nav-menu-link nav-link">Veterinarios</a>
+        </li>
+        <li class="nav-menu-item">
+          <a href="ConsultarMascota.html" class="nav-menu-link nav-link">Consultar</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+   <section>
+    <div class="box-padre">
+      <div class="contenedor-perrito">
+        <img src="img/perrito.png" class="perrito-imagen" >
+      </div>      
+      <div class="testbox">
+        <h1>Registro Dueño</h1>  
+        <form action="/">
+          <hr>
+          <label id="icon" for="name"><i class="bi bi-tag"></i></label>
+          <input type="text" name="name" id="name" placeholder="Ingrese Nombres" required/>
+          <label id="icon" for="name"><i class="bi bi-clipboard-minus-fill"></i></label>
+          <input type="text" name="name" id="name" placeholder="Ingrese Apellidos" required/>
+          <label id="icon" for="name"><i class="bi bi-paint-bucket"></i></label>
+          <input type="text" name="name" id="name" placeholder="Ingrese Dirección" required/>
+          <label id="icon" for="name"><i class="bi bi-paint-bucket"></i></label>
+          <input type="text" name="name" id="name" placeholder="Ingrese Teléfono" required/>
+          <label id="icon" for="name"><i class="bi bi-paint-bucket"></i></label>
+          <input type="text" name="name" id="name" placeholder="Correo Electrónico" required/>          
+          <button type="submit" class="registro-button"> Registrar</button>
+        </form>
+      </div>
+      <div class="contenedor-perrito">
+        <img src="img/gato.png" class="gatito-imagen" >
+      </div>
+    </div>      
+  </section> 
+</body>
+</html>
