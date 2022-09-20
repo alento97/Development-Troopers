@@ -9,21 +9,22 @@ using MascotaFeliz.App.Persistencia;
 
 namespace MascotaFeliz.App.Frontend.Pages
 {
-    public class ListaDuenosModel : PageModel
+    public class ListaMascotasModel : PageModel
     {
-        private readonly IRepositorioDueno _repoDueno;
+        private readonly IRepositorioMascota _repoMascota;
         [BindProperty]
-        public IEnumerable<Dueno> listaDuenos {get;set;}      
+        public IEnumerable<Mascota> listaMascotas {get;set;}      
+
         public string Filtro {get;set;}      
 
-        public ListaDuenosModel()
+        public ListaMascotasModel()
         {
-            this._repoDueno = new RepositorioDueno(new Persistencia.AppContext());
+            this._repoMascota = new RepositorioMascota(new Persistencia.AppContext());
         }
 
         public void OnGet()
         {
-            listaDuenos = _repoDueno.GetAllDuenos();
+            listaMascotas = _repoMascota.GetAllMascotas();
         }
 
          public IActionResult OnPost(string? Filtro)
@@ -34,7 +35,7 @@ namespace MascotaFeliz.App.Frontend.Pages
             }
             else
             {
-                listaDuenos = _repoDueno.GetDuenosPorFiltro(Filtro);
+                listaMascotas = _repoMascota.GetMascotasPorFiltro(Filtro);
             }
             return Page();
         }
@@ -44,6 +45,10 @@ namespace MascotaFeliz.App.Frontend.Pages
             Filtro = string.Empty;
         }
 
-
     }
 }
+
+
+
+
+

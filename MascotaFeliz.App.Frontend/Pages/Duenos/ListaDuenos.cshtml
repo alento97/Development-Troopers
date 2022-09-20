@@ -1,21 +1,37 @@
 ﻿@page
-@model MascotaFeliz.App.Frontend.Pages.ListaDuenosModel
-@{
+@model MascotaFeliz.App.Frontend.Pages.ListaDuenosModel 
+@{  
 }
+<h1>Listado de Propietarios</h1>
 
-<h1> Listado de Dueños <h1>
+<form method="post">
+    <div class="form-group">
+        <label ></label>
+        <input asp-for="@Model.Filtro" class="form-control">
+        <button type="submit" asp-route-Filtro="@Model.Filtro" class="btn btn-primary">filtrar</button>      
+        <a class="btn btn-primary table-btn" asp-page="./ListaDuenos"> Limpiar </a> 
+    </div>
+</form>
 <table class="table">
-    @foreach (var dueno in Model.ListaDuenos)
-    {
-        <tr>
-        <td>@dueno.Id</td>
-        <td>@dueno.Nombres</td>
-        <td>@dueno.Apellidos</td>
-        </tr>
-        <td>
-                <a class="btn btn-primary table-btn" asp-page="./DetallesDuenos" asp-route-duenoId="@dueno.Id">
-                    Detalle Dueno
-                </a>
-            </td>
-    }
+  @foreach (var dueno in Model.listaDuenos)
+  {
+    <tr>
+      <td>@dueno.Id</td>
+      <td>@dueno.Nombres</td>
+      <td>@dueno.Apellidos</td>
+      <td>
+        <a class="btn btn-primary table-btn" asp-page="./DetallesDuenos" asp-route-duenoId="@dueno.Id">  
+        Detalle Dueño
+        </a>
+      </td>
+      <td>
+        <a class="btn btn-primary table-btn" asp-page="./EditarDuenos" asp-route-duenoId="@dueno.Id">  
+        Editar Dueño
+        </a>
+      </td>
+    </tr>
+  }
 </table>
+<a class = "btn btn-primary table-btn" asp-page="./EditarDuenos" class="btn-default">Adicionar Dueño</a>
+
+

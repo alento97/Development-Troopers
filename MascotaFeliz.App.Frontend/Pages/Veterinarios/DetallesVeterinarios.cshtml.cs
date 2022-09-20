@@ -9,20 +9,20 @@ using MascotaFeliz.App.Persistencia;
 
 namespace MascotaFeliz.App.Frontend.Pages
 {
-    public class DetallesDuenosModel : PageModel
+    public class DetallesVeterinariosModel : PageModel
     {
-        private readonly IRepositorioDueno _repoDueno;
-        public Dueno dueno{get;set;}
+        private readonly IRepositorioVeterinario _repoVeterinario;
+        public Veterinario veterinario{get;set;}
 
-        public DetallesDuenosModel()
+        public DetallesVeterinariosModel()
         {
-            this._repoDueno = new RepositorioDueno(new Persistencia.AppContext());
+            this._repoVeterinario = new RepositorioVeterinario(new Persistencia.AppContext());
         }
 
-        public IActionResult OnGet(int duenoId)
+        public IActionResult OnGet(int veterinarioId)
         {
-            dueno = _repoDueno.GetDueno(duenoId);
-            if (dueno == null)
+            veterinario = _repoVeterinario.GetVeterinario(veterinarioId);
+            if (veterinario == null)
             {
                 return RedirectToPage("./NotFound");
             }
@@ -35,3 +35,4 @@ namespace MascotaFeliz.App.Frontend.Pages
         }
     }
 }
+
